@@ -25,7 +25,7 @@ NB the most important things:
 - src/index.js -> contains App component which is rendred to root component
 npm run build -> to deploy it 
 npm start -> run the dev server 
-NB component are : functions(can have a state) or classes (can not have a state, it can have hooks) 
+NB component are : functions(can have a state) or classes (can have a state, it can have hooks) 
 
 ==================Lesson 5. CRA Cleanup & Prepare
 NB remove :
@@ -80,6 +80,12 @@ nav.navbar.bg-primary
 NB in App.js
 - import Navbar
 - use it </Navbar > 
-==================Lesson 9.
-==================Lesson 4.
-==================Lesson 4.
+
+
+
+==================Lesson 9. Getting Started With Component State 
+NB when you add a component, made it basic to see it in app component.
+NB in class, we define a sate object at class level or constructor level (do not forget the super)
+NB next lesson, we create Users componenet (having stae of all users ), it will caontains all userItem components. and passes the data via props 
+
+==================Lesson 10. Lists & Passing State With Props
