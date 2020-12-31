@@ -1,0 +1,85 @@
+==================2 setting up the env
+-nodejs npm
+-vs (es7 react, bracket paire colorier, autorename tag)
+-git
+-react dev tool
+-redux dev tools 
+-postman used in second project
+- format on save (setting -> search for : format on save -> check the format on save checkbox)
+
+==================Lesson 3. Project Introduction
+objectif: 
+-class base component 
+-stateless functional component 
+
+we have:
+user component 
+  user item component
+clear component 
+more button -> react router to another page : to show latest repo 
+==================Lesson 4. Create React App & File Structure
+npx create-react-app .
+NB the most important things:
+- package.json -> fot dependencies 
+- public/index.html -> the main/root app component
+- src/index.js -> contains App component which is rendred to root component
+npm run build -> to deploy it 
+npm start -> run the dev server 
+NB component are : functions(can have a state) or classes (can not have a state, it can have hooks) 
+
+==================Lesson 5. CRA Cleanup & Prepare
+NB remove :
+- src/Apptestjs
+- src/index.css 
+- src/logo.svg
+- src/serviceWorker.js  reportwebvital.js & setupTests.js  
+NB change the App.css by the attached 
+NB in App.js : we changed function to class
+NB next lecture we look to jsx (html inside render)
+
+=================Lesson 6. Intro To JavaScripteXtention JSX & Fragments
+NB remeber the follwong wahne copy/paste html :
+- for -> forHTML
+- class -> className 
+NB JSX must have one tag parent 
+NB use React.fragement or <Navbar> instead of dic to hide div parent and return 2 children inside it  
+NB without JSX, use React.createElement('name', {att: 'value'}, 'content')
+
+==================Lesson 7. Expressions & Conditionals In JSX
+inside jsx:
+{loading ? <h1>loading</h1>: <h1>Hello {shoname && name}</h1>}
+
+==================Lesson 8. Components, Props & PropTypes
+src/components/navbar/NavBar.js -> rce :to generate class based view
+
+NB we need 4 things from https://api.github.com/users : login,  id, photo link, profile 
+create src/components/users -> anything related to user
+- UserItem.js -> rce + tab : generate class based view 
+- www.fontawsome.com/start -> to use icons -> and paste it public/html
+NB props are arguments of components
+NB impt -> to import PropType to give a type to props
+
+
+static defaultProps ={
+  icon: "fa fa-github",
+  title: "Github Finder"
+} 
+static defaultTypes = {
+  title: PropTypes.string.isRequired
+  icon: PropTypes.string.isRequired
+}
+NB if you pass array instead of string, yo see warining on inspect
+nav.navbar.bg-primary 
+<nav className="navbar bg-primary">
+  <h1>
+    i.fa.fa-github 
+    <i className={this.props.icon}/> {this.props.title}
+  </h1>
+</nav>
+
+NB in App.js
+- import Navbar
+- use it </Navbar > 
+==================Lesson 9.
+==================Lesson 4.
+==================Lesson 4.
