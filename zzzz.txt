@@ -104,3 +104,9 @@ NB be carful: arrow function with () in react (because jsx )  instead of {} in r
 - if a class has a static att, then use <func_name>.<static_att>
 - destructor user and its att from props
 - next lesson we move our users data to main component, and we will fetch the api 
+
+==================Lesson 12. HTTP Requests & Updating State
+- componentDidMount() -> lifcyle methode : executed once the compoenent is mounted.
+- npm i axios -> equivalent to fetch in App component because we have all compoenent here to send them data if necessary
+- define state object with data (empty table) and loading: false (for spiner)
+- to update a value of state, use this.setState() instead of this.state.att
