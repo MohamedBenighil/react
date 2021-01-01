@@ -79,13 +79,28 @@ nav.navbar.bg-primary
 
 NB in App.js
 - import Navbar
-- use it </Navbar > 
-
-
+- use it </Navbar> 
 
 ==================Lesson 9. Getting Started With Component State 
 NB when you add a component, made it basic to see it in app component.
 NB in class, we define a sate object at class level or constructor level (do not forget the super)
-NB next lesson, we create Users componenet (having stae of all users ), it will caontains all userItem components. and passes the data via props 
+NB next lesson, we create Users componenet (having stae of all users ), it will contains all userItem components. and passes the state(liste of users) via props 
 
 ==================Lesson 10. Lists & Passing State With Props
+- create Users compoenent : component/users/Users.js ans create state having a list of users
+- import UserItem on Users 
+- pass the data via props 
+- look at the repeating (remove the state section from Useritem)
+- the UserItem & Navbar have no state, in next lesson we transform them into function component instead of class  
+NB be carful: arrow function with () in react (because jsx )  instead of {} in react 
+- to add margin, you can use .container class on Uuser compoenent in App.js
+- you can also add css style without {{}}, by definig an abject 
+- Notice the warrning "key must be unique" in Users, and fix it with key={user.id}
+
+==================Lesson 11. Stateless Functional Components
+we will transform all class based component (which doesn't have a state) to functional component
+but at the end we have just functional component beacause we use hook (at this moment, functional compoenent have a state) 
+props will be passed as parameter of function, and we don't nee render render methode
+if a class has a static att, then use <func_name>.<static_att>
+destructor user and its att from props
+next lesson we move our users data to main component, and we will fetch the api 
