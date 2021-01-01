@@ -98,9 +98,9 @@ NB be carful: arrow function with () in react (because jsx )  instead of {} in r
 - Notice the warrning "key must be unique" in Users, and fix it with key={user.id}
 
 ==================Lesson 11. Stateless Functional Components
-we will transform all class based component (which doesn't have a state) to functional component
-but at the end we have just functional component beacause we use hook (at this moment, functional compoenent have a state) 
-props will be passed as parameter of function, and we don't nee render render methode
-if a class has a static att, then use <func_name>.<static_att>
-destructor user and its att from props
-next lesson we move our users data to main component, and we will fetch the api 
+- we will transform all class based component (which doesn't have a state) to functional component
+- but at the end we have just functional component beacause we use hook (at this moment, functional compoenent have a state) 
+- props will be passed as parameter of function, and we don't nee render render methode
+- if a class has a static att, then use <func_name>.<static_att>
+- destructor user and its att from props
+- next lesson we move our users data to main component, and we will fetch the api 
