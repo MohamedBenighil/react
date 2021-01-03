@@ -130,3 +130,7 @@ next lesson we add search component
 when we have a forme, we attach it's input to state.
 this.setState(text "e.target.name": e.target.value )
 Now what we want to do is when we click on serch buton, it takes the content of text (defined in state ) and calll the api
+
+
+==================Lesson 16. Passing Props Up & Search
+we can send function (not just variables) through props 
