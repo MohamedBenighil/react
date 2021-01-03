@@ -125,3 +125,8 @@ create file .env.local having client_id & client_secret then restart the server
 add them to url process.env.<REACT_APP_VAR_NAME> : client_id=${}&client_secret=${} ->google: github register app
 notice you have to satrt the env with REACT_APP
 next lesson we add search component
+
+==================Lesson 15. Events & Search Component
+when we have a forme, we attach it's input to state.
+this.setState(text "e.target.name": e.target.value )
+Now what we want to do is when we click on serch buton, it takes the content of text (defined in state ) and calll the api
