@@ -110,3 +110,11 @@ NB be carful: arrow function with () in react (because jsx )  instead of {} in r
 - npm i axios -> equivalent to fetch in App component because we have all compoenent here to send them data if necessary
 - define state object with data (empty table) and loading: false (for spiner)
 - to update a value of state, use this.setState() instead of this.state.att
+
+
+==================Lesson 13. Spinner Component & Refactoring
+- racf -> creates arrow function  
+- in component, if we have just return, then we can delete {}
+- always import imaes in varibale before use them in src
+- do not forget the PropType in spiner
+- in next video ae add github api credentials to do not allow our api to be exhausted 
