@@ -13,7 +13,7 @@ class App extends Component{
   }
   async componentDidMount(){
     this.setState({loading: true})
-    const res = await axios.get("https://api.github.com/users")
+    const res = await axios.get(`https://api.github.com/users?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`)
     this.setState({users: res.data,loading: false})
   }
 
@@ -21,9 +21,7 @@ class App extends Component{
     return (
       <div className="App">
         <Navbar />
-        <div className="container">
-        <Users loading={this.state.loading} users={this.state.users} />
-        </div>
+        <div className="container"><Users loading={this.state.loading} users={this.state.users} /></div>
       </div>
     );
   }

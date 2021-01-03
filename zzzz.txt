@@ -118,3 +118,10 @@ NB be carful: arrow function with () in react (because jsx )  instead of {} in r
 - always import imaes in varibale before use them in src
 - do not forget the PropType in spiner
 - in next video ae add github api credentials to do not allow our api to be exhausted 
+
+==================Lesson 14. Environment Variables
+clg -> console.log
+create file .env.local having client_id & client_secret then restart the server
+add them to url process.env.<REACT_APP_VAR_NAME> : client_id=${}&client_secret=${} ->google: github register app
+notice you have to satrt the env with REACT_APP
+next lesson we add search component
