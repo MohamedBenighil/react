@@ -1,11 +1,13 @@
 //import logo from './logo.svg';
 import './App.css';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import axios from 'axios'
 import Navbar from './components/navbar/Navbar'
 import Users from './components/users/Users'
 import Search from './components/users/Search'
 import Alert from './components/Alert/Alert'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import About from './components/About/About'
 
 
 class App extends Component{
@@ -46,17 +48,28 @@ class App extends Component{
 
   render(){
     return (
+    <Router>
       <div className="App">
         <Navbar />
         <div className="container">
-        <Alert alert={this.state.alert}/>
-          <Search findUser={this.findUser} clearUsers={this.clearUsers} usersNotEmpty={this.usersNotEmpty} setAlert={this.setAlert}/>
-          <Users loading={this.state.loading} users={this.state.users} />
+          <Alert alert={this.state.alert}/>
+          <Switch>
+            <Route exact path='/' render={ props => (
+              <Fragment>
+                <Search findUser={this.findUser} clearUsers={this.clearUsers} usersNotEmpty={this.usersNotEmpty} setAlert={this.setAlert}/>
+                <Users loading={this.state.loading} users={this.state.users} />
+              </Fragment>
+            )}
+            />
+            <Route exact path='/about' component={About}
+            
+            />
+          </Switch>
         </div>
       </div>
-    );
+    </Router>  
+    )
   }
-
 }
 
 export default App;

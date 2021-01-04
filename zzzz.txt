@@ -147,3 +147,24 @@ NB be carful: arrow function with () in react (because jsx )  instead of {} in r
 - the alert button should take 3s (you can add close button)
 - call setAlert on Search component within onSubmit methode, and define it on App component.
 - next video we imlpement react router because when we click on more button, we like to rest on the same page and get more data.
+
+==================Lesson 19. React Router Setup
+npm i react-router-dom 
+App : import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+wrap evrything in <Router>
+how to put multiple component in single Route? :
+<Switch>
+  <Route exact path='/' render={props => (  => multiple compoenent
+    <Fragment>
+      <Search>
+      <Users>
+    </Fragment>
+  )}/>
+  <Route exact path="/about" compoenent={About}/> => single component
+</Switch>
+
+Lets create About component
+
+go to navbar and create about and home:
+import {Link} from 'react-route-dom'
+NB do not use <a href... tag (because it will refresh and clear the state) use <Link to... instead
