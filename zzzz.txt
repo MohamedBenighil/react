@@ -120,17 +120,23 @@ NB be carful: arrow function with () in react (because jsx )  instead of {} in r
 - in next video ae add github api credentials to do not allow our api to be exhausted 
 
 ==================Lesson 14. Environment Variables
-clg -> console.log
-create file .env.local having client_id & client_secret then restart the server
-add them to url process.env.<REACT_APP_VAR_NAME> : client_id=${}&client_secret=${} ->google: github register app
-notice you have to satrt the env with REACT_APP
-next lesson we add search component
+- clg -> console.log
+- create file .env.local having client_id & client_secret then restart the server
+- add them to url process.env.<REACT_APP_VAR_NAME> : client_id=${}&client_secret=${} ->google: github register app
+- notice you have to satrt the env with REACT_APP
+- next lesson we add search component
 
 ==================Lesson 15. Events & Search Component
-when we have a forme, we attach it's input to state.
-this.setState(text "e.target.name": e.target.value )
-Now what we want to do is when we click on serch buton, it takes the content of text (defined in state ) and calll the api
+- when we have a forme, we attach it's input to state.
+- this.setState(text "e.target.name": e.target.value )
+- Now what we want to do is when we click on serch buton, it takes the content of text (defined in state ) and calll the api
 
 
 ==================Lesson 16. Passing Props Up & Search
-we can send function (not just variables) through props 
+- we can send function (not just variables) through props
+- next video we add clear btn
+
+==================Lesson 17. Clear Users From State
+- the clear button should be in the same component (Search) but outside of form
+- the button should not appear if when the page is empty
+- next video we show alert if the user sends empty data
