@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
 class Search extends Component {
+    
     state = {
         text: ""
     }
@@ -16,8 +17,13 @@ class Search extends Component {
 
     onSubmit = (e) => {
         e.preventDefault()
-        this.props.findUser(this.state.text)
-        this.setState({text: ""})
+        if (this.state.text === ""){ // to verify 
+            this.props.setAlert("Please fill the input field!", "light")
+        }else{
+            this.props.findUser(this.state.text)
+            this.setState({text: ""})
+        }
+
     }
 
     

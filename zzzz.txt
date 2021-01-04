@@ -140,3 +140,10 @@ NB be carful: arrow function with () in react (because jsx )  instead of {} in r
 - the clear button should be in the same component (Search) but outside of form
 - the button should not appear if when the page is empty
 - next video we show alert if the user sends empty data
+
+
+==================Lesson 18. Alert State & Component
+- define alert component.
+- the alert button should take 3s (you can add close button)
+- call setAlert on Search component within onSubmit methode, and define it on App component.
+- next video we imlpement react router because when we click on more button, we like to rest on the same page and get more data.

@@ -5,12 +5,14 @@ import axios from 'axios'
 import Navbar from './components/navbar/Navbar'
 import Users from './components/users/Users'
 import Search from './components/users/Search'
+import Alert from './components/Alert/Alert'
 
 
 class App extends Component{
   state = {
     users: [],
-    loading: false
+    loading: false,
+    alert: null
   }
 
 //  async componentDidMount(){
@@ -35,12 +37,20 @@ class App extends Component{
     return this.state.users.length > 0
   }
 
+  setAlert = (msg, type) => {
+      this.setState({alert: {msg, type}});
+      setTimeout(()=> {
+        this.setState({alert: null})
+      },3000)
+  };
+
   render(){
     return (
       <div className="App">
         <Navbar />
         <div className="container">
-          <Search findUser={this.findUser} clearUsers={this.clearUsers} usersNotEmpty={this.usersNotEmpty}/>
+        <Alert alert={this.state.alert}/>
+          <Search findUser={this.findUser} clearUsers={this.clearUsers} usersNotEmpty={this.usersNotEmpty} setAlert={this.setAlert}/>
           <Users loading={this.state.loading} users={this.state.users} />
         </div>
       </div>
