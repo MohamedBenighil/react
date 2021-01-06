@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom'
 
 const UserItem = ({user: {avatar_url,login,html_url}}) => {
-        //const {avatar_url, login, html_url } = props.user // distruction
         return (
             <div className="card text-center">                
                 <img className="round-img" src={avatar_url} alt="" style={{width: "60px"}} />
                 <h1>{login}</h1>
                 <div>
-                    <a href={html_url} className="btn btn-dark btn-sm my-1">More</a>
+                    <Link to={`/user/${login}`} className="btn btn-dark btn-sm my-1">More</Link>
                 </div>
             </div>
         )

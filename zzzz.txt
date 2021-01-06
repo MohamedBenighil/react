@@ -168,3 +168,14 @@ Lets create About component
 go to navbar and create about and home:
 import {Link} from 'react-route-dom'
 NB do not use <a href... tag (because it will refresh and clear the state) use <Link to... instead
+
+==================Lesson 20. Single User Component & Data
+App: create getUser = (username) -> to get user infos which will be stored in user object in state
+create new User compenent (based class because of componenetDidMount having getUser defined in App )
+App : import User component 
+App: Create new route to User
+App: since we have stuff to pass in (getUser, ...props, user, loading ), the we use the <Route exact path='/'... format instead of <Route exact path="/about"...
+NB you have to pass props and {...props } else: you get a error : match undefined
+UserItem: to={`/user/{login}`} -> login is defined as input of the component.
+User: pull username from url and call getUser(): componentDidMount(){this.props.getuser(this.props.match.params.login}
+10.10
