@@ -178,4 +178,9 @@ App: since we have stuff to pass in (getUser, ...props, user, loading ), the we 
 NB you have to pass props and {...props } else: you get a error : match undefined
 UserItem: to={`/user/{login}`} -> login is defined as input of the component.
 User: pull username from url and call getUser(): componentDidMount(){this.props.getuser(this.props.match.params.login}
-10.10
+
+Next video we will desing the UI
+
+==================Lesson 21. User Component UI & Layout
+creat a button (link) to go to home
+crate: Hireable * or - (get the value from hirable) 
