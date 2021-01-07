@@ -184,3 +184,11 @@ Next video we will desing the UI
 ==================Lesson 21. User Component UI & Layout
 creat a button (link) to go to home
 crate: Hireable * or - (get the value from hirable) 
+we have one Card with 2 grids
+we have 1 Card with one grid
+
+==================Lesson 22. Repos & RepoItem Component & Data
+App: add getUserRepo() & state.repos=[] then pass them to User.
+User: call getUserRepo() then pass this.props.repos to Repos component.
+Repos: get repos and map throw them then pass each repo to  RepoItem.
+RepoItem: get one repo and desing RepoItem with that repo.

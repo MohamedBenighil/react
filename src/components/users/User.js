@@ -1,10 +1,12 @@
 import React, { Fragment, Component } from 'react'
 import Spinner from '../spinner/Spinner'
 import {Link} from 'react-router-dom'
+import Repos from '../Repos/Repos'
 
 class User extends Component {
     componentDidMount(){
         this.props.getUser(this.props.match.params.login)
+        this.props.getUserRepos(this.props.match.params.login)
     }
     render() {
         const { 
@@ -24,7 +26,8 @@ class User extends Component {
             public_gists
         } = this.props.user
 
-        const {loading} = this.props.loading
+        const {loading, repos} = this.props
+   
 
         if (loading){
             return  <Spinner />
@@ -66,7 +69,9 @@ class User extends Component {
                     <div className="badge badge-success">Following: {following}</div>
                     <div className="badge badge-light">Public Repos: {public_repos}</div>
                     <div className="badge badge-dark">Public Gests: {public_gists}</div>
+                    
                 </div>
+                <Repos  repos={repos}/>
             </Fragment>
 
         )
