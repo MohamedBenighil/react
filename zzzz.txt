@@ -187,8 +187,13 @@ crate: Hireable * or - (get the value from hirable)
 we have one Card with 2 grids
 we have 1 Card with one grid
 
-==================Lesson 22. Repos & RepoItem Component & Data
+================== Lesson 22. Repos & RepoItem Component & Data
 App: add getUserRepo() & state.repos=[] then pass them to User.
 User: call getUserRepo() then pass this.props.repos to Repos component.
 Repos: get repos and map throw them then pass each repo to  RepoItem.
 RepoItem: get one repo and desing RepoItem with that repo.
+
+================== Lesson 23. Search Class to Function With useState Hook
+Search: convert from class having sate to function using useState hook
+rplace state with const [text,setText] = useState('')
+to convert method to function (inside function) you have to add const 
