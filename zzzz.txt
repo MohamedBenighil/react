@@ -197,3 +197,11 @@ RepoItem: get one repo and desing RepoItem with that repo.
 Search: convert from class having sate to function using useState hook
 rplace state with const [text,setText] = useState('')
 to convert method to function (inside function) you have to add const 
+
+================== Lesson 24. User Class to Function With useEffect Hook
+User: convert from class having componenetDidMount methode to function using useEffect hook
+useEffect has 2 input: call back and array (of arrays in which when updated, the component updates as well )
+add //eslint-desable-next-line to avoid the showing warning
+
+
+TODO: do your TP
