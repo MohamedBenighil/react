@@ -203,5 +203,7 @@ User: convert from class having componenetDidMount methode to function using use
 useEffect has 2 input: call back and array (of arrays in which when updated, the component updates as well )
 add //eslint-desable-next-line to avoid the showing warning
 
-
-TODO: do your TP
+================== Lesson 25. 
+convert App to function
+notice that App is 
+context api to manage app level better ans create 
