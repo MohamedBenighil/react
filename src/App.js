@@ -14,8 +14,8 @@ import GithubState from './context/github/GithubState'
 
 const App = () => {
 
-  const [user, setUser] = useState({});
-  const [users, setUsers] = useState([]);
+  // const [user, setUser] = useState({});
+  // const [users, setUsers] = useState([]);
   const [repos, setRepos] = useState([])
   const [loading, setLoading] = useState(false)
   const [alert, setAlert] = useState(null)
@@ -28,12 +28,12 @@ const App = () => {
   //   setLoading(false)    
   // } 
 
-  const getUser = async (username) => {
-    setLoading(true)
-    const res =  await axios.get(`https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`)
-    setUser(res.data)
-    setLoading(false)
-  } 
+  // const getUser = async (username) => {
+  //   setLoading(true)
+  //   const res =  await axios.get(`https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`)
+  //   setUser(res.data)
+  //   setLoading(false)
+  // } 
   
   const getUserRepos = async (username) => {
     setLoading(true)
@@ -42,15 +42,15 @@ const App = () => {
     setLoading(false)           
   } 
 
-  const clearUsers = () => {  
-    setUsers([])
-    // we do not need to call to the following function
-    setLoading(false)
-  }
+//  const clearUsers = () => {  
+//    setUsers([])
+//    // we do not need to call to the following function
+//    setLoading(false)
+//  }
 
-  const usersNotEmpty = () => {
-    return users.length > 0
-  }
+//const usersNotEmpty = () => {
+//  return users.length > 0
+//}
 
   const showAlert = (msg, type) => {
       setAlert({msg, type})
@@ -69,15 +69,15 @@ const App = () => {
               <Switch>
                 <Route exact path='/' render={ props => (
                   <Fragment>
-                    <Search clearUsers={clearUsers} usersNotEmpty={usersNotEmpty} setAlert={showAlert}/>
-                    <Users loading={loading} users={users} />
+                    <Search /*clearUsers={clearUsers} usersNotEmpty={usersNotEmpty}*/ setAlert={showAlert}/>
+                    <Users /*loading={loading} users={users} *//>
                   </Fragment>
                 )}
                 />
                 <Route exact path='/about' component={About}/>
                 <Route exact path='/user/:login' render={ props => (
                   <Fragment>
-                    <User {...props} getUser={getUser} user={user} loading={loading} getUserRepos={getUserRepos} repos={repos} />
+                    <User {...props} /*getUser={getUser}  user={user}*/ loading={loading} getUserRepos={getUserRepos} repos={repos} />
                   </Fragment>
                 )}
                 />

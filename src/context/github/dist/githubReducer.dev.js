@@ -22,6 +22,18 @@ var _default = function _default(state, action) {
         loading: true
       });
 
+    case _types.CLEAR_USERS:
+      return _objectSpread({}, state, {
+        users: [],
+        loading: false
+      });
+
+    case _types.GET_USER:
+      return _objectSpread({}, state, {
+        user: action.payload,
+        loading: false
+      });
+
     case _types.SEARCH_USERS:
       return _objectSpread({}, state, {
         users: action.payload,

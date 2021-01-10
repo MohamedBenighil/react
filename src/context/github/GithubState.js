@@ -37,10 +37,28 @@ const GithubState = props => {
       } 
 
     //Get user
+    const getUser = async (username) => {
+        setLoading()
+        const res =  await axios.get(`https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`)
+        // setUser(res.data)
+        // setLoading(false)
+        dispatch({
+            type: GET_USER,
+            payload: res.data
+        })
+      } 
 
     //Get Repos 
 
     //Clear Users
+    const clearUsers = () => {
+
+        //setUsers([])
+        // we do not need to call to the following function
+        //setLoading(false)
+        dispatch({type: CLEAR_USERS})  
+      }
+
 
     //Set loading
     const setLoading = () =>{
@@ -53,7 +71,9 @@ const GithubState = props => {
         user: state.user,
         repos: state.repos,
         loading: state.loading,
-        findUser
+        findUser,
+        clearUsers,
+        getUser
     }}>
     {/*because we wrap the entire App inside Provider */}
     {props.children}

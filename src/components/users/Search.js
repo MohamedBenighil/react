@@ -1,9 +1,9 @@
 import React, { useState, useContext} from 'react'
-import PropTypes from 'prop-types';
 import GithubContext from '../../context/github/githubContext'
 
 const Search = (props) => {
     const githubContext = useContext(GithubContext)
+    
     
     const [text, setText] = useState('')
 
@@ -27,14 +27,11 @@ const Search = (props) => {
                     <input type="text" name="text" placeholder="Search user here ..." value={text} onChange={onChange}/>
                     <input type="submit" value="Search" className="btn btn-dark btn-block" />
                 </form>
-                { props.usersNotEmpty() && <input type="button" value="Clear" className="btn btn-block" onClick={props.clearUsers}/> }
+                { githubContext.users.length > 0 && <input type="button" value="Clear" className="btn btn-block" onClick={githubContext.clearUsers}/> }
             </div>
         )
     
 }
 
-Search.propTypes = {
-    findUser: PropTypes.func.isRequired,
-    clearUsers: PropTypes.func.isRequired
-}
+
 export default Search

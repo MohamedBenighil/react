@@ -239,3 +239,8 @@ githubReducer: put whatever to state and send it down to any component
 githubReducer: ...state -> make a copy of state 
 
 
+==================Lesson 28. Moving User State To Context
+App: -> User -> delete clearuser & show clear, clearuser definition   
+1. dispaly users on the page
+2. App:  delete usersNotEmpty and transform clearUser as action 
+3. App: transform getUser as action 
