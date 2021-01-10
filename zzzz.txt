@@ -249,4 +249,7 @@ App: -> User -> delete clearuser & show clear, clearuser definition
     3.3 delete const [user, setUser] = useState({});
 
 Next we move repos
-==================Lesson 29.
+==================Lesson 29. Moving Repos State To Context
+App: we remove {...props} from User
+App: transform as getUserRepo 
+

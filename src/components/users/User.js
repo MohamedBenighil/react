@@ -9,7 +9,7 @@ const User = (props) =>  {
 
     useEffect(() => {
         githubContext.getUser(props.match.params.login)
-        props.getUserRepos(props.match.params.login)
+        githubContext.getUserRepos(props.match.params.login)
         //eslint-disable-next-line 
     }, [])
 
@@ -31,7 +31,7 @@ const User = (props) =>  {
         public_gists
     } = githubContext.user
 
-    const {loading, repos} = props
+    const {loading, repos} = githubContext
 
     if (loading){
     return  <Spinner />

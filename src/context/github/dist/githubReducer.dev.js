@@ -40,6 +40,12 @@ var _default = function _default(state, action) {
         loading: false
       });
 
+    case _types.GET_REPOS:
+      return _objectSpread({}, state, {
+        repos: action.payload,
+        loading: false
+      });
+
     default:
       return state;
   }

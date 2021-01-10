@@ -25,23 +25,17 @@ const GithubState = props => {
 
     //Search Users
     const findUser = async (username) => {
-        //setLoading(true)
         setLoading()
         const res =  await axios.get(`https://api.github.com/search/users?q=${username}&client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`)
-        //setUsers(res.data.items)
         dispatch({
             type: SEARCH_USERS,
             payload: res.data.items
         })
-        //setLoading(false)    
       } 
-
-    //Get user
+    //Get User
     const getUser = async (username) => {
         setLoading()
         const res =  await axios.get(`https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`)
-        // setUser(res.data)
-        // setLoading(false)
         dispatch({
             type: GET_USER,
             payload: res.data
@@ -49,16 +43,22 @@ const GithubState = props => {
       } 
 
     //Get Repos 
+    const getUserRepos = async (username) => {
+        setLoading()
+        const res =  await axios.get(`https://api.github.com/users/${username}/repos?per_page=5&sort=asc&client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`)
+        //setRepos(res.data)
+        //setLoading(false)
+        dispatch({
+            type: GET_REPOS,
+            payload: res.data
+        })     
+      } 
+    
 
     //Clear Users
     const clearUsers = () => {
-
-        //setUsers([])
-        // we do not need to call to the following function
-        //setLoading(false)
         dispatch({type: CLEAR_USERS})  
       }
-
 
     //Set loading
     const setLoading = () =>{
@@ -73,7 +73,11 @@ const GithubState = props => {
         loading: state.loading,
         findUser,
         clearUsers,
-        getUser
+        getUser,
+        setLoading,
+        getUserRepos
+
+
     }}>
     {/*because we wrap the entire App inside Provider */}
     {props.children}
