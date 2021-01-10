@@ -243,4 +243,10 @@ githubReducer: ...state -> make a copy of state
 App: -> User -> delete clearuser & show clear, clearuser definition   
 1. dispaly users on the page
 2. App:  delete usersNotEmpty and transform clearUser as action 
-3. App: transform getUser as action 
+3. App: transform getUser as action :
+    3.1 start by moving the function getUser
+    3.2 User delete getUser and user 
+    3.3 delete const [user, setUser] = useState({});
+
+Next we move repos
+==================Lesson 29.
