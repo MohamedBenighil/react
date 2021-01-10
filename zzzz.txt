@@ -225,3 +225,17 @@ Steps:
 2. GithubState.js : state + actions  
 3. Types.js: which is relevant to all github context(githubContext,githubReducer, GithubState) having variables that you can call
              to change the state within your reducer  
+4. githubReducer: is just function wich takes state and action as input parameter
+
+================== Lesson 27. Create Reducer & Actions
+we want to move evrything from App.js to GithubState.js
+reducer : change the state of certain componenent when needed 
+we move function from App to State and use them as Action then i will show you how to connect to context with individual compenent
+    using the use_context hook 
+
+GithubState: dispatch(whaterver)
+githubReducer: put whatever to state and send it down to any component
+
+githubReducer: ...state -> make a copy of state 
+
+
