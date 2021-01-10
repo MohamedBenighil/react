@@ -203,7 +203,19 @@ User: convert from class having componenetDidMount methode to function using use
 useEffect has 2 input: call back and array (of arrays in which when updated, the component updates as well )
 add //eslint-desable-next-line to avoid the showing warning
 
-================== Lesson 25. 
-convert App to function
-notice that App is 
-context api to manage app level better ans create 
+================== Lesson 25. App Class to Function Component
+convert App to function.
+notice that App is cantains a lot of code, next lesso we user context api to manage App better.
+
+================== Lesson 26. Implementing Context (new kooks: use_context & use_reducer )
+context-api (for small and medium app ) is alternative to redux(for large app) when you want to manage app level state.
+
+each ressource has these 3 files:
+src/context/github/githubContext.js
+src/context/github/GithubState.js : 
+having all context ex: if we call action to fetch data, so it will be here 
+initial state + actions(call github)
+we will use Types: src/context/types.js: are string variable that you call to change your state within your reducer
+src/context/github/githubReducer.js   reducer: what happen to state based on action  
+once you have your state file got to App then import GithubState then wrapp all app inside <GithubState>
+
