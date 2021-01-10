@@ -219,3 +219,9 @@ we will use Types: src/context/types.js: are string variable that you call to ch
 src/context/github/githubReducer.js   reducer: what happen to state based on action  
 once you have your state file got to App then import GithubState then wrapp all app inside <GithubState>
 
+
+Steps:
+1. githubContext.js : initialize new context : with createContext()
+2. GithubState.js : state + actions  
+3. Types.js: which is relevant to all github context(githubContext,githubReducer, GithubState) having variables that you can call
+             to change the state within your reducer  

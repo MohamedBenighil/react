@@ -18,7 +18,9 @@ const GithubState = props => {
         repos: [],
         loading: false
     }
-    //this GithubState will include all of our actions 
+
+    // this GithubState will include all of our actions 
+    // once we call action, then we get result, then we dispatch a type (the vars inside types.js) to our reducer
     const [state, dispatch ] = useReducer(githubReducer, initialState)
 
     //Search Users
@@ -31,12 +33,14 @@ const GithubState = props => {
 
     //Set loading
  
+    // the goal is to make the state available to the entire App:   
     return <githubContext.Provider value={{
         users: state.users,
         user: state.user,
         repos: state.repos,
         loading: state.loading
     }}>
+    {/*because wa wrap the entire App inside Provider */}
     {props.children}
     </githubContext.Provider> 
 }
