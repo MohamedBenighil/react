@@ -12,7 +12,7 @@ const Search = (props) => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        if (text === ""){ // to verify 
+        if (text === ""){ 
             props.setAlert("Please fill the input field!", "light")
         }else{
             githubContext.findUser(text)

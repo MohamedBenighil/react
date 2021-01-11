@@ -6,10 +6,6 @@ import {
     GET_REPOS
  } from '../types'
 
-const githubRedcuer = props => {
-
-}
-
 export default (state, action) => {
     switch (action.type) {
         case SET_LOADING:
