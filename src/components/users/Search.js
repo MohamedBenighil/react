@@ -1,8 +1,10 @@
 import React, { useState, useContext} from 'react'
 import GithubContext from '../../context/github/githubContext'
+import AlertContext from '../../context/alert/alertContext'
 
-const Search = (props) => {
+const Search = () => {
     const githubContext = useContext(GithubContext)
+    const alertContext = useContext(AlertContext)
     
     
     const [text, setText] = useState('')
@@ -13,7 +15,7 @@ const Search = (props) => {
     const onSubmit = (e) => {
         e.preventDefault()
         if (text === ""){ 
-            props.setAlert("Please fill the input field!", "light")
+            alertContext.setAlert("Please fill the input field!", "light")
         }else{
             githubContext.findUser(text)
             setText("")

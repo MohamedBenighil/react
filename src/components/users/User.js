@@ -20,7 +20,6 @@ const User = (props) =>  {
         avatar_url,
         location,
         bio,
-        blog,
         login,
         html_url,
         company,
