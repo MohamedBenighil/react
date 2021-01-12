@@ -253,3 +253,9 @@ Next we move repos
 App: we remove {...props} from User
 App: transform as getUserRepo 
 
+
+==================Lesson 30. Alert Context Workflow
+Convert Alert function to Alert context 
+
+==================Lesson 31. Home & NotFound Components
+create Home page & Not found 
