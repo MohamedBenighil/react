@@ -259,3 +259,17 @@ Convert Alert function to Alert context
 
 ==================Lesson 31. Home & NotFound Components
 create Home page & Not found 
+
+
+==================Lesson 32. Prepare & Deploy To Netlify
+netlify -> npm i -g netlify (you have to have an account)
+change the env vars
+create netfly.toml -> [build]
+                        publish="build"
+
+netfly init 
+deploy the env vars on the server
+npm run build -> wait for build folder
+netfly deploy --prod
+
+Next course, we build fullstack api instead of using 3rdparty api
